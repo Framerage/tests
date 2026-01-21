@@ -1,0 +1,28 @@
+.filters {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+
+  list-style: none;
+  li {
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100%;
+    text-align: center;
+  }
+}
+.userList {
+  list-style: none;
+  li {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+    border-bottom: 2px solid black;
+    div,
+    input {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
