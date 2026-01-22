@@ -11,4 +11,4 @@ function sum(arg: number = 0) {
   //   return (s: number) => {
   //   return sum(arg + s);
   // };
-}]
+}

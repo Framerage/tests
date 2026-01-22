@@ -1,0 +1,41 @@
+.theme_container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100vh;
+  transition: 0.2s;
+}
+
+/* theme */
+.theme-light {
+  background: #fff;
+  color: #000;
+}
+
+.theme-dark {
+  background: #000;
+  color: #fff;
+}
+
+/* fonts */
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 16px;
+}
+.font-lg {
+  font-size: 18px;
+}
+
+/* contrast */
+.high_contrast_low {
+  filter: contrast(1);
+}
+.high_contrast_middle {
+  filter: contrast(1.5);
+}
+.high_contrast_high {
+  filter: contrast(2);
+}

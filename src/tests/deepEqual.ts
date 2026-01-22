@@ -13,6 +13,11 @@ export const deepEqual = (obj1: object, obj2: object) => {
   if (!isAnyKeyExist) {
     return false;
   }
-  const isEveryKeyValueEqual = obj1Keys.every((key) => obj1[key] === obj2[key]);
+  const isEveryKeyValueEqual = obj1Keys.every((key) => {
+    if (typeof obj1[key] === "object" && typeof obj2[key] === "object") {
+      return deepEqual(obj1[key], obj2[key]);
+    }
+    return obj1[key] === obj2[key];
+  });
   return isEveryKeyValueEqual;
 };

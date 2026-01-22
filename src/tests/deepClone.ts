@@ -1,9 +1,18 @@
 // Реализуй функцию deepClone, которая делает глубокую копию объекта.
-export const deepClone = (obj1: object, obj2: object) => {
-  // return {...obj2,...obj1}
-  const obj1Entries = Object.entries(obj1);
-  obj1Entries.forEach((elem) => {
-    obj2[elem[0]] = elem[1];
-  });
+export function deepClone(obj1: object, obj2: object) {
+  for (const key in obj1) {
+    const value = obj1[key];
+
+    if (Array.isArray(value)) {
+      obj2[key] = value.map((item) =>
+        typeof item === "object" && item !== null ? deepClone(item, {}) : item,
+      );
+    } else if (typeof value === "object" && value !== null) {
+      obj2[key] = deepClone(value, obj2[key] ?? {});
+    } else {
+      obj2[key] = value;
+    }
+  }
+
   return obj2;
-};
+}
