@@ -48,13 +48,17 @@ const memoEntry = (fn: Function) => {
       }
       return node.weakCache.get(arg);
     } else {
+      //проверка на NaN
+      if (typeof arg === "number" && arg !== arg) {
+        return { ...node };
+      }
       if (!node.mapCache) {
         node.mapCache = new Map();
       }
       if (!node.mapCache.has(arg)) {
         node.mapCache.set(arg, {});
       }
-      return node.mapCache.get(arg)!;
+      return node.mapCache.get(arg);
     }
   };
 
