@@ -37,7 +37,7 @@ const useDebounce = (val: string, ms: number) => {
 const useSortedList = (
   itemKey: TListItemKeys,
   sortCondition: SortABC,
-  list: TListItem[]
+  list: TListItem[],
 ) => {
   return useMemo(() => {
     return [...list].sort((a, b) => {
@@ -128,14 +128,14 @@ const ItemField = memo(
         onChange={handleChange}
       />
     );
-  }
+  },
 );
 interface IPropsItem {
   item: TListItem;
   handleChangeItem: (
     itemId: string,
     itemKey: TListItemKeys,
-    newValue: string
+    newValue: string,
   ) => void;
 }
 const ListItem: FC<IPropsItem> = ({ item, handleChangeItem }) => {
@@ -144,7 +144,7 @@ const ListItem: FC<IPropsItem> = ({ item, handleChangeItem }) => {
     (v: string, key: TListItemKeys) => {
       handleChangeItem(id, key, v);
     },
-    [id]
+    [id],
   );
   // console.log("render list item", id);
   return (
@@ -212,8 +212,9 @@ export const TestUsersTable = () => {
       });
       setInitialList(newList);
     },
-    [initialList]
+    [initialList],
   );
+
   return (
     <section>
       <h2>Users</h2>
