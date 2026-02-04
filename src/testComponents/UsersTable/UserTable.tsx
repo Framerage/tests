@@ -7,7 +7,7 @@ import {
   type ChangeEvent,
   type FC,
 } from "react";
-import styles from "./testUsersTable..module.css";
+import styles from "./usersTable..module.css";
 
 // type TSortCondition = "ABC" | "CBA";
 type TListItemKeys = "id" | "name" | "email" | "role";
@@ -178,7 +178,7 @@ const ListItem: FC<IPropsItem> = ({ item, handleChangeItem }) => {
     </li>
   );
 };
-export const TestUsersTable = () => {
+export const UsersTable = () => {
   const [sortCondition, setSortCondition] = useState(() => SortABC.ABC);
   const [currentSortKey, setCurrentSortKey] = useState<TListItemKeys>("id");
   const [initialList, setInitialList] = useState(() => list);

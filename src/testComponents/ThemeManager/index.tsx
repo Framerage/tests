@@ -1,6 +1,6 @@
 import { useEffect, useReducer } from "react";
 import cn from "classnames";
-import styles from "./testThemes.module.css";
+import styles from "./themeManager.module.css";
 
 type Theme = "light" | "dark";
 type FontSize = "sm" | "md" | "lg";
@@ -38,7 +38,7 @@ function reducer(state: State, action: Action): State {
   }
 }
 
-export const TestThemeManager = () => {
+export const ThemeManager = () => {
   const [state, dispatch] = useReducer(reducer, initialState, () => {
     const saved = localStorage.getItem(STORAGE_KEY);
     return saved ? JSON.parse(saved) : initialState;
