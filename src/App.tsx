@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 // import { ThemeManager } from "./testComponents/ThemeManager";
 import { TestTodoList } from "./testComponents/TestTodoList";
+import { traverseObject } from "./tests/traverseObject";
 
 const Test2 = () => {
   console.log("test 6");
@@ -41,6 +42,17 @@ const Test1 = (props) => {
   }, []);
   return <>{props?.children}</>;
 };
+
+const testObj = {
+  l1: "text",
+  l1other: {
+    l2: {
+      l3: "text 3",
+    },
+    l2other: "text2",
+  },
+};
+traverseObject(testObj);
 function App() {
   const [count, setCount] = useState(0);
   //useLayoutEffect = console + child console
