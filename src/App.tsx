@@ -5,6 +5,7 @@ import "./App.css";
 // import { ThemeManager } from "./testComponents/ThemeManager";
 import { TestTodoList } from "./testComponents/TestTodoList";
 import { traverseObject } from "./tests/traverseObject";
+import { dictionary } from "./tests/dictionary";
 
 const Test2 = () => {
   console.log("test 6");
@@ -54,6 +55,13 @@ const testObj = {
 };
 // traverseObject(testObj);
 
+const trip = [
+  { from: "Msk", to: "Ulsk" },
+  { from: "Samara", to: "Tolyati" },
+  { from: "Ulsk", to: "Kzn" },
+  { from: "Kzn", to: "Samara" },
+];
+console.log(dictionary(trip));
 function App() {
   const [count, setCount] = useState(0);
   //useLayoutEffect = console + child console
