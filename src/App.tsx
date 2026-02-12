@@ -52,7 +52,8 @@ const testObj = {
     l2other: "text2",
   },
 };
-traverseObject(testObj);
+// traverseObject(testObj);
+
 function App() {
   const [count, setCount] = useState(0);
   //useLayoutEffect = console + child console
@@ -82,7 +83,7 @@ function App() {
         <Test2 />
       </Test1>
       {/* <TestThemeManager /> */}
-      <TestTodoList />
+      {/* <TestTodoList /> */}
     </>
   );
 }
