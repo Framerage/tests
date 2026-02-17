@@ -7,7 +7,7 @@ const groupArr = <T>(arr: T[], key: keyof T) => {
     if (
       Object.prototype.hasOwnProperty.call(
         resultGroups,
-        keyGroupValue as string
+        keyGroupValue as string,
       )
     ) {
       resultGroups[keyGroupValue as string].push(el);
@@ -17,3 +17,14 @@ const groupArr = <T>(arr: T[], key: keyof T) => {
   });
   return resultGroups;
 };
+// const cars = [
+//   { brand: "Lada", model: "2110" },
+//   { brand: "Lada", model: "Нива" },
+//   { brand: "Mazda", model: "RX8" },
+//   { brand: "BMW", model: "M3" },
+// ];
+// const result = {
+//   Lada: [{ model: "2110" }, { model: "Нива" }],
+//   Mazda: [{ model: "RX8" }],
+//   BMW: [{ model: "M3" }],
+// };
