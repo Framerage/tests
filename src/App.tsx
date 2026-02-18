@@ -6,6 +6,8 @@ import "./App.css";
 import { TestTodoList } from "./testComponents/TestTodoList";
 import { traverseObject } from "./tests/traverseObject";
 import { dictionary } from "./tests/dictionary";
+import { retry } from "./tests/retry";
+import { createCodes } from "./tests/codeGenerator";
 
 const Test2 = () => {
   console.log("test 6");
@@ -61,7 +63,8 @@ const trip = [
   { from: "Ulsk", to: "Kzn" },
   { from: "Kzn", to: "Samara" },
 ];
-console.log(dictionary(trip));
+// console.log(dictionary(trip));
+
 function App() {
   const [count, setCount] = useState(0);
   //useLayoutEffect = console + child console
@@ -87,9 +90,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <Test1>
+      {/* <Test1>
         <Test2 />
-      </Test1>
+      </Test1> */}
       {/* <TestThemeManager /> */}
       {/* <TestTodoList /> */}
     </>
