@@ -2,12 +2,6 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-// import { ThemeManager } from "./testComponents/ThemeManager";
-import { TestTodoList } from "./testComponents/TestTodoList";
-import { traverseObject } from "./tests/traverseObject";
-import { dictionary } from "./tests/dictionary";
-import { retry } from "./tests/retry";
-import { createCodes } from "./tests/codeGenerator";
 
 const Test2 = () => {
   console.log("test 6");
@@ -64,7 +58,6 @@ const trip = [
   { from: "Kzn", to: "Samara" },
 ];
 // console.log(dictionary(trip));
-
 function App() {
   const [count, setCount] = useState(0);
   //useLayoutEffect = console + child console
