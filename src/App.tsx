@@ -1,9 +1,10 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import { memo, useEffect, useLayoutEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { CustomComp } from "./testComponents/CustomMemo";
 
-const Test2 = () => {
+const Test2 = memo(() => {
   console.log("test 6");
 
   useEffect(() => {
@@ -19,8 +20,14 @@ const Test2 = () => {
   useLayoutEffect(() => {
     console.log("test 10");
   }, []);
-  return <p>text</p>;
-};
+  console.log("render test2 component");
+  return (
+    <ul>
+      <li>1</li>
+      <li>2</li>
+    </ul>
+  );
+});
 const Test1 = (props) => {
   console.log("test 1");
 
@@ -88,6 +95,7 @@ function App() {
       </Test1> */}
       {/* <TestThemeManager /> */}
       {/* <TestTodoList /> */}
+      <CustomComp test="str" test2={1} test3={NaN} />
     </>
   );
 }
