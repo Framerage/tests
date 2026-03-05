@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { CustomComp } from "./testComponents/CustomMemo";
+import RouteCard from "./testComponents/RouteCard/RouteCard";
 
 const Test2 = memo(() => {
   console.log("test 6");
@@ -96,6 +97,7 @@ function App() {
       {/* <TestThemeManager /> */}
       {/* <TestTodoList /> */}
       <CustomComp test="str" test2={1} test3={NaN} />
+      <RouteCard />
     </>
   );
 }

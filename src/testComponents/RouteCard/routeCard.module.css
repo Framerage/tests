@@ -1,0 +1,113 @@
+.card {
+  border: 2px solid #1e88e5;
+  border-radius: 14px;
+  padding: 24px;
+  width: 700px;
+  font-family: sans-serif;
+  background-color: white;
+  color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statusBtn {
+  background: #1e88e5;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.progressWrapper {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.pointLabel {
+  font-weight: 500;
+}
+
+.progress {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* .line {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e0e0e0;
+  z-index: 0;
+} */
+
+.progress {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.line {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e0e0e0;
+}
+
+.lineProgress {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: 4px;
+  background: #1e88e5;
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #1e88e5;
+}
+
+.circle.grey {
+  background: #ddd;
+}
+
+.meta {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.date {
+  color: #999;
+}
+
+.title {
+  margin-top: 4px;
+  font-size: 11px;
+}
+.grey {
+  background: #ddd;
+}
+.active {
+  background: #1e88e5;
+}
